@@ -1,0 +1,1 @@
+(()=>{"use strict";window.addEventListener("DOMContentLoaded",(()=>{console.log("init art-quiz project")}))})();
