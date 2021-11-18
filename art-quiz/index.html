@@ -4,9 +4,307 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="./style.css">
   <title>dumbus art-quiz</title>
 </head>
 <body>
+  <div class="container container-mainscreen">
+    <div class="container-inner">
+      <header class="header">
+        <div class="header-default">
+          <img class="header-default-icon" src="./assets/svg/settings.svg" alt="settings-icon">
+        </div>
   
+        <div class="header-settings hidden-block">
+          <div class="header-settings-left">
+            <div class="header-settings-left-text">Settings</div>
+          </div>
+          <div class="header-settings-right">
+            <img src="./assets/svg/close.svg" alt="close">
+          </div>
+        </div>
+  
+        <div class="header-menu hidden hidden-block">
+          <div class="header-menu-text">
+            <div class="header-menu-text-logo">
+              <span>Art</span> Quiz
+              <div class="pseudo-left"></div>
+              <div class="pseudo-right"></div>
+            </div>
+            <div class="header-menu-text-home">Home</div>
+            <div class="header-menu-text-categories">Categories</div>
+          </div>
+          <img class="header-menu-icon" src="./assets/svg/settings.svg" alt="settings-icon">
+        </div>
+
+        <div class="header-questions hidden hidden-block">
+          <img src="./assets/svg/close.svg" alt="close" class="header-questions-close">
+          <div class="header-questions-progress">
+            <div class="header-questions-progress-inactive"></div>
+            <div class="header-questions-progress-active"></div>
+          </div>
+          <div class="header-questions-timer">20</div>
+        </div>
+      </header>
+  
+      <main class="main">
+        <div class="mainscreen">
+          <h1 class="mainscreen-header">Art Quiz</h1>
+          <div class="mainscreen-buttons">
+            <div class="mainscreen-buttons-artists button">Artist quiz</div>
+            <div class="mainscreen-buttons-pictures button">Pictures quiz</div>
+          </div>
+        </div>
+  
+        <div class="settings hidden-block">
+          <div class="settings-volume settings-block">
+            <h2 class="settings-subheader">Volume</h2>
+            <input type="range" id="settings-volume" class="progress" name="settings-volume" min="0" max="100" step="1" value="40" style="background: linear-gradient(to right, #FFBCA2 40%, #FFBCA2 0%, rgb(196, 196, 196) 0%, rgb(196, 196, 196) 100%);">
+            <div class="settings-volume-buttons">
+              <div class="settings-volume-buttons-mute">
+                <img src="./assets/svg/volume-mute.svg" alt="mute">
+              </div>
+              <div class="settings-volume-buttons-change">
+                <img src="./assets/svg/volume-change.svg" alt="change">
+              </div>
+            </div>
+          </div>
+  
+          <div class="settings-timer settings-block">
+            <h2 class="settings-subheader">Time game</h2>
+            <div class="switch"></div>
+          </div>
+  
+          <div class="settings-number settings-block">
+            <h2 class="settings-subheader">Time to answer</h2>
+            <div class="settings-number">
+              <button class="settings-number-btn" onclick="this.parentNode.querySelector('input[type=number]').stepDown()" class="minus">-</button>
+              <input class="settings-number-input" name="settings-number" value="20" min="0" max="30" step="5" type="number" readonly>
+              <button class="settings-number-btn" onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus">+</button>
+            </div>
+          </div>
+  
+          <div class="settings-button button">Save</div>
+        </div>
+  
+        <div class="categories-container hidden hidden-block">
+          <div class=" categories">
+            <div class="categories-item">
+              <div class="categories-item-header">
+                <div class="categories-item-header-title">Round 1</div>
+                <div class="categories-item-header-score">0/10</div>
+              </div>
+              <img src="./assets/img/artists/1.jpg" alt="1">
+            </div>
+    
+            <div class="categories-item">
+              <div class="categories-item-header">
+                <div class="categories-item-header-title">Round 2</div>
+                <div class="categories-item-header-score">0/10</div>
+              </div>
+              <img src="./assets/img/artists/2.jpg" alt="2">
+            </div>
+    
+            <div class="categories-item">
+              <div class="categories-item-header">
+                <div class="categories-item-header-title">Round 3</div>
+                <div class="categories-item-header-score">0/10</div>
+              </div>
+              <img src="./assets/img/artists/3.jpg" alt="3">
+            </div>
+    
+            <div class="categories-item">
+              <div class="categories-item-header">
+                <div class="categories-item-header-title">Round 4</div>
+                <div class="categories-item-header-score">0/10</div>
+              </div>
+              <img src="./assets/img/artists/4.jpg" alt="4">
+            </div>
+    
+            <div class="categories-item">
+              <div class="categories-item-header">
+                <div class="categories-item-header-title">Round 5</div>
+                <div class="categories-item-header-score">0/10</div>
+              </div>
+              <img src="./assets/img/artists/5.jpg" alt="5">
+            </div>
+    
+            <div class="categories-item">
+              <div class="categories-item-header">
+                <div class="categories-item-header-title">Round 6</div>
+                <div class="categories-item-header-score">0/10</div>
+              </div>
+              <img src="./assets/img/artists/6.jpg" alt="6">
+            </div>
+    
+            <div class="categories-item">
+              <div class="categories-item-header">
+                <div class="categories-item-header-title">Round 7</div>
+                <div class="categories-item-header-score">0/10</div>
+              </div>
+              <img src="./assets/img/artists/7.jpg" alt="7">
+            </div>
+    
+            <div class="categories-item">
+              <div class="categories-item-header">
+                <div class="categories-item-header-title">Round 8</div>
+                <div class="categories-item-header-score">0/10</div>
+              </div>
+              <img src="./assets/img/artists/8.jpg" alt="8">
+            </div>
+    
+            <div class="categories-item">
+              <div class="categories-item-header">
+                <div class="categories-item-header-title">Round 9</div>
+                <div class="categories-item-header-score">0/10</div>
+              </div>
+              <img src="./assets/img/artists/9.jpg" alt="9">
+            </div>
+    
+            <div class="categories-item">
+              <div class="categories-item-header">
+                <div class="categories-item-header-title">Round 10</div>
+                <div class="categories-item-header-score">0/10</div>
+              </div>
+              <img src="./assets/img/artists/10.jpg" alt="10">
+            </div>
+    
+            <div class="categories-item">
+              <div class="categories-item-header">
+                <div class="categories-item-header-title">Round 11</div>
+                <div class="categories-item-header-score">0/10</div>
+              </div>
+              <img src="./assets/img/artists/11.jpg" alt="11">
+            </div>
+    
+            <div class="categories-item">
+              <div class="categories-item-header">
+                <div class="categories-item-header-title">Round 12</div>
+                <div class="categories-item-header-score">0/10</div>
+              </div>
+              <img src="./assets/img/artists/12.jpg" alt="12">
+            </div>
+          </div>
+
+        </div>
+
+        <div class="questions questions-artists hidden hidden-block">
+          <div class="questions-subheader">Who is the author of this picture?</div>
+          <div class="questions-artists-picture">
+            <img src="./assets/img/question.jpg" alt="artist" class="questions-artists-picture-img">
+            <div class="questions-artists-picture-dots">
+              <div class="questions-artists-picture-dots-item questions-artists-picture-dots-item-incorrect"></div>
+              <div class="questions-artists-picture-dots-item questions-artists-picture-dots-item-correct"></div>
+              <div class="questions-artists-picture-dots-item"></div>
+              <div class="questions-artists-picture-dots-item"></div>
+              <div class="questions-artists-picture-dots-item"></div>
+              <div class="questions-artists-picture-dots-item"></div>
+              <div class="questions-artists-picture-dots-item"></div>
+              <div class="questions-artists-picture-dots-item"></div>
+              <div class="questions-artists-picture-dots-item"></div>
+              <div class="questions-artists-picture-dots-item"></div>
+            </div>
+          </div>
+
+          <div class="questions-artists-buttons">
+            <div class="questions-artists-buttons-item button">Peter Paul Rubens</div>
+            <div class="questions-artists-buttons-item button">Peter Paul Rubens</div>
+            <div class="questions-artists-buttons-item button">Peter Paul Rubens</div>
+            <div class="questions-artists-buttons-item button">Peter Paul Rubens</div>
+          </div>
+        </div>
+
+        <div class="questions questions-paintings hidden hidden-block">
+          <div class="questions-subheader">Which is Edvard Munch picture?</div>
+          <div class="questions-paintings-grid">
+            <div class="questions-paintings-grid-item">
+              <img src="./assets/img/question.jpg" alt="painting" class="questions-paintings-grid-item-img">
+              <div class="questions-paintings-grid-item-overlay questions-paintings-grid-item-overlay-correct"></div>
+            </div>
+            <div class="questions-paintings-grid-item">
+              <img src="./assets/img/question.jpg" alt="painting" class="questions-paintings-grid-item-img">
+              <div class="questions-paintings-grid-item-overlay questions-paintings-grid-item-overlay-incorrect"></div>
+            </div>
+            <div class="questions-paintings-grid-item">
+              <img src="./assets/img/question.jpg" alt="painting" class="questions-paintings-grid-item-img">
+              <div class="questions-paintings-grid-item-overlay"></div>
+            </div>
+            <div class="questions-paintings-grid-item">
+              <img src="./assets/img/question.jpg" alt="painting" class="questions-paintings-grid-item-img">
+              <div class="questions-paintings-grid-item-overlay"></div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="modal">
+          <div class="modal-quit hidden">
+            <div class="modal-quit-close">
+              <img src="./assets/svg/close-black.svg" alt="close">
+            </div>
+            <div class="modal-quit-text">
+              Do you really want to quit the game?
+            </div>
+            <div class="modal-quit-btns">
+              <div class="button button-white modal-quit-btn modal-quit-btn-cancel">Cancel</div>
+              <div class="button button-white modal-quit-btn modal-quit-btn-confirm">Yes</div>
+            </div>
+          </div>
+
+          <div class="modal-answer hidden">
+            <div class="modal-answer-picture">
+              <img src="./assets/img/paintings/1.jpg" alt="painting" class="modal-answer-picture-img">
+              <img src="./assets/svg/correct-answer.svg" alt="correct" class="modal-answer-picture-icon">
+            </div>
+            <div class="modal-answer-painting">Girl with a Pearl Earring</div>
+            <div class="modal-answer-artist">Johannes Vermeer, 1665</div>
+            <div class="modal-answer-btn button button-pink">Next</div>
+          </div>
+
+          <div class="modal-victory hidden">
+            <div class="modal-victory-img">
+              <img src="./assets/svg/cup-success.svg" alt="success">
+            </div>
+            <div class="modal-victory-subheader">Congratulations!</div>
+            <div class="modal-victory-result">8/10</div>
+            <div class="modal-victory-btns">
+              <div class="button button-white modal-victory-btn modal-victory-btn-home">Home</div>
+              <div class="button button-white modal-victory-btn modal-victory-btn-next">Next Quiz</div>
+            </div>
+          </div>
+
+          <div class="modal-fail hidden">
+            <div class="modal-fail-img">
+              <img src="./assets/svg/cup-fail.svg" alt="fail">
+            </div>
+            <div class="modal-fail-subheader">Game over</div>
+            <div class="modal-fail-result">Play again?</div>
+            <div class="modal-fail-btns">
+              <div class="button button-white modal-fail-btn modal-fail-btn-no">No</div>
+              <div class="button button-white modal-fail-btn modal-fail-btn-yes">Yes</div>
+            </div>
+          </div>
+        </div>
+      </main>
+  
+      <footer class="footer">
+        <a class="footer-left" href="https://rs.school/" target="_blank">
+          <img src="./assets/svg/rsschool-icon.svg" alt="rsschool">
+        </a>
+        <div class="footer-right">
+          <div class="footer-right-developer">
+            App developer: Dumbus
+          </div>
+          <div class="footer-right-year">
+            2021
+          </div>
+        </div>
+      </footer>
+
+      <div class="overlay hidden"></div>
+    </div>
+  </div>
+  <script src="./index.js"></script>
 </body>
 </html>
