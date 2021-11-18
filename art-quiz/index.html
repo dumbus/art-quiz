@@ -13,19 +13,19 @@
     <div class="container-inner">
       <header class="header">
         <div class="header-default">
-          <img class="header-default-icon" src="./assets/svg/settings.svg" alt="settings-icon">
+          <img class="header-default-icon mainscreen-settings-open-btn" src="./assets/svg/settings.svg" alt="settings-icon">
         </div>
   
         <div class="header-settings hidden">
           <div class="header-settings-left">
             <div class="header-settings-left-text">Settings</div>
           </div>
-          <div class="header-settings-right">
+          <div class="header-settings-right settings-close">
             <img src="./assets/svg/close.svg" alt="close">
           </div>
         </div>
   
-        <div class="header-menu hidden hidden-block">
+        <div class="header-menu hidden">
           <div class="header-menu-text">
             <div class="header-menu-text-logo">
               <span>Art</span> Quiz
@@ -35,10 +35,10 @@
             <div class="header-menu-text-home">Home</div>
             <div class="header-menu-text-categories">Categories</div>
           </div>
-          <img class="header-menu-icon" src="./assets/svg/settings.svg" alt="settings-icon">
+          <img class="header-menu-icon categories-settings-open-btn" src="./assets/svg/settings.svg" alt="settings-icon">
         </div>
 
-        <div class="header-questions hidden hidden-block">
+        <div class="header-questions hidden">
           <img src="./assets/svg/close.svg" alt="close" class="header-questions-close">
           <div class="header-questions-progress">
             <div class="header-questions-progress-inactive"></div>
@@ -87,12 +87,12 @@
             </div>
           </div>
   
-          <div class="settings-button button">Save</div>
+          <div class="settings-button button settings-save-button">Save</div>
         </div>
   
-        <div class="categories-container hidden hidden-block">
-          <div class=" categories">
-            <div class="categories-item">
+        <div class="categories-container">
+          <div class="categories categories-artists hidden">
+            <div class="categories-item categories-artists-item">
               <div class="categories-item-header">
                 <div class="categories-item-header-title">Round 1</div>
                 <div class="categories-item-header-score">0/10</div>
@@ -100,7 +100,7 @@
               <img src="./assets/img/artists/1.jpg" alt="1">
             </div>
     
-            <div class="categories-item">
+            <div class="categories-item categories-artists-item">
               <div class="categories-item-header">
                 <div class="categories-item-header-title">Round 2</div>
                 <div class="categories-item-header-score">0/10</div>
@@ -108,7 +108,7 @@
               <img src="./assets/img/artists/2.jpg" alt="2">
             </div>
     
-            <div class="categories-item">
+            <div class="categories-item categories-artists-item">
               <div class="categories-item-header">
                 <div class="categories-item-header-title">Round 3</div>
                 <div class="categories-item-header-score">0/10</div>
@@ -116,7 +116,7 @@
               <img src="./assets/img/artists/3.jpg" alt="3">
             </div>
     
-            <div class="categories-item">
+            <div class="categories-item categories-artists-item">
               <div class="categories-item-header">
                 <div class="categories-item-header-title">Round 4</div>
                 <div class="categories-item-header-score">0/10</div>
@@ -124,7 +124,7 @@
               <img src="./assets/img/artists/4.jpg" alt="4">
             </div>
     
-            <div class="categories-item">
+            <div class="categories-item categories-artists-item">
               <div class="categories-item-header">
                 <div class="categories-item-header-title">Round 5</div>
                 <div class="categories-item-header-score">0/10</div>
@@ -132,7 +132,7 @@
               <img src="./assets/img/artists/5.jpg" alt="5">
             </div>
     
-            <div class="categories-item">
+            <div class="categories-item categories-artists-item">
               <div class="categories-item-header">
                 <div class="categories-item-header-title">Round 6</div>
                 <div class="categories-item-header-score">0/10</div>
@@ -140,7 +140,7 @@
               <img src="./assets/img/artists/6.jpg" alt="6">
             </div>
     
-            <div class="categories-item">
+            <div class="categories-item categories-artists-item">
               <div class="categories-item-header">
                 <div class="categories-item-header-title">Round 7</div>
                 <div class="categories-item-header-score">0/10</div>
@@ -148,7 +148,7 @@
               <img src="./assets/img/artists/7.jpg" alt="7">
             </div>
     
-            <div class="categories-item">
+            <div class="categories-item categories-artists-item">
               <div class="categories-item-header">
                 <div class="categories-item-header-title">Round 8</div>
                 <div class="categories-item-header-score">0/10</div>
@@ -156,7 +156,7 @@
               <img src="./assets/img/artists/8.jpg" alt="8">
             </div>
     
-            <div class="categories-item">
+            <div class="categories-item categories-artists-item">
               <div class="categories-item-header">
                 <div class="categories-item-header-title">Round 9</div>
                 <div class="categories-item-header-score">0/10</div>
@@ -164,7 +164,7 @@
               <img src="./assets/img/artists/9.jpg" alt="9">
             </div>
     
-            <div class="categories-item">
+            <div class="categories-item categories-artists-item">
               <div class="categories-item-header">
                 <div class="categories-item-header-title">Round 10</div>
                 <div class="categories-item-header-score">0/10</div>
@@ -172,7 +172,7 @@
               <img src="./assets/img/artists/10.jpg" alt="10">
             </div>
     
-            <div class="categories-item">
+            <div class="categories-item categories-artists-item">
               <div class="categories-item-header">
                 <div class="categories-item-header-title">Round 11</div>
                 <div class="categories-item-header-score">0/10</div>
@@ -180,12 +180,110 @@
               <img src="./assets/img/artists/11.jpg" alt="11">
             </div>
     
-            <div class="categories-item">
+            <div class="categories-item categories-artists-item">
               <div class="categories-item-header">
                 <div class="categories-item-header-title">Round 12</div>
                 <div class="categories-item-header-score">0/10</div>
               </div>
               <img src="./assets/img/artists/12.jpg" alt="12">
+            </div>
+          </div>
+
+          <div class="categories categories-paintings hidden">
+            <div class="categories-item categories-paintings-item">
+              <div class="categories-item-header">
+                <div class="categories-item-header-title">Round 1</div>
+                <div class="categories-item-header-score">0/10</div>
+              </div>
+              <img src="./assets/img/paintings/1.jpg" alt="1">
+            </div>
+    
+            <div class="categories-item categories-paintings-item">
+              <div class="categories-item-header">
+                <div class="categories-item-header-title">Round 2</div>
+                <div class="categories-item-header-score">0/10</div>
+              </div>
+              <img src="./assets/img/paintings/2.jpg" alt="2">
+            </div>
+    
+            <div class="categories-item categories-paintings-item">
+              <div class="categories-item-header">
+                <div class="categories-item-header-title">Round 3</div>
+                <div class="categories-item-header-score">0/10</div>
+              </div>
+              <img src="./assets/img/paintings/3.jpg" alt="3">
+            </div>
+    
+            <div class="categories-item categories-paintings-item">
+              <div class="categories-item-header">
+                <div class="categories-item-header-title">Round 4</div>
+                <div class="categories-item-header-score">0/10</div>
+              </div>
+              <img src="./assets/img/paintings/4.jpg" alt="4">
+            </div>
+    
+            <div class="categories-item categories-paintings-item">
+              <div class="categories-item-header">
+                <div class="categories-item-header-title">Round 5</div>
+                <div class="categories-item-header-score">0/10</div>
+              </div>
+              <img src="./assets/img/paintings/5.jpg" alt="5">
+            </div>
+    
+            <div class="categories-item categories-paintings-item">
+              <div class="categories-item-header">
+                <div class="categories-item-header-title">Round 6</div>
+                <div class="categories-item-header-score">0/10</div>
+              </div>
+              <img src="./assets/img/paintings/6.jpg" alt="6">
+            </div>
+    
+            <div class="categories-item categories-paintings-item">
+              <div class="categories-item-header">
+                <div class="categories-item-header-title">Round 7</div>
+                <div class="categories-item-header-score">0/10</div>
+              </div>
+              <img src="./assets/img/paintings/7.jpg" alt="7">
+            </div>
+    
+            <div class="categories-item categories-paintings-item">
+              <div class="categories-item-header">
+                <div class="categories-item-header-title">Round 8</div>
+                <div class="categories-item-header-score">0/10</div>
+              </div>
+              <img src="./assets/img/paintings/8.jpg" alt="8">
+            </div>
+    
+            <div class="categories-item categories-paintings-item">
+              <div class="categories-item-header">
+                <div class="categories-item-header-title">Round 9</div>
+                <div class="categories-item-header-score">0/10</div>
+              </div>
+              <img src="./assets/img/paintings/9.jpg" alt="9">
+            </div>
+    
+            <div class="categories-item categories-paintings-item">
+              <div class="categories-item-header">
+                <div class="categories-item-header-title">Round 10</div>
+                <div class="categories-item-header-score">0/10</div>
+              </div>
+              <img src="./assets/img/paintings/10.jpg" alt="10">
+            </div>
+    
+            <div class="categories-item categories-paintings-item">
+              <div class="categories-item-header">
+                <div class="categories-item-header-title">Round 11</div>
+                <div class="categories-item-header-score">0/10</div>
+              </div>
+              <img src="./assets/img/paintings/11.jpg" alt="11">
+            </div>
+    
+            <div class="categories-item categories-paintings-item">
+              <div class="categories-item-header">
+                <div class="categories-item-header-title">Round 12</div>
+                <div class="categories-item-header-score">0/10</div>
+              </div>
+              <img src="./assets/img/paintings/12.jpg" alt="12">
             </div>
           </div>
 
