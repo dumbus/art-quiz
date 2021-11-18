@@ -49,11 +49,13 @@
       </header>
   
       <main class="main">
-        <div class="mainscreen">
-          <h1 class="mainscreen-header">Art Quiz</h1>
-          <div class="mainscreen-buttons">
-            <div class="mainscreen-buttons-artists button">Artist quiz</div>
-            <div class="mainscreen-buttons-pictures button">Pictures quiz</div>
+        <div class="mainscreen-container">
+          <div class="mainscreen">
+            <h1 class="mainscreen-header">Art Quiz</h1>
+            <div class="mainscreen-buttons">
+              <div class="mainscreen-buttons-artists button">Artist quiz</div>
+              <div class="mainscreen-buttons-pictures button">Pictures quiz</div>
+          </div>
           </div>
         </div>
   
@@ -303,6 +305,13 @@
       </footer>
 
       <div class="overlay hidden"></div>
+    </div>
+
+    <div class="container-overlay hidden">
+      <div class="container-overlay-item container-overlay-lt container-overlay-lt-hidden"></div>
+      <div class="container-overlay-item container-overlay-rt container-overlay-rt-hidden"></div>
+      <div class="container-overlay-item container-overlay-lb container-overlay-lb-hidden"></div>
+      <div class="container-overlay-item container-overlay-rb container-overlay-rb-hidden"></div>
     </div>
   </div>
   <script src="./index.js"></script>
