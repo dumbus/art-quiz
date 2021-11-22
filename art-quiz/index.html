@@ -53,10 +53,6 @@
 
         <div class="header-questions hidden">
           <img src="./assets/svg/close.svg" alt="close" class="header-questions-close">
-          <div class="header-questions-progress">
-            <div class="header-questions-progress-inactive"></div>
-            <div class="header-questions-progress-active"></div>
-          </div>
           <div class="header-questions-timer">&#8734;</div>
         </div>
       </header>
@@ -75,7 +71,7 @@
         <div class="settings hidden">
           <div class="settings-volume settings-block">
             <h2 class="settings-subheader">Volume</h2>
-            <input type="range" id="settings-volume" class="progress" name="settings-volume" min="0" max="100" step="1" value="40" style="background: linear-gradient(to right, #FFBCA2 40%, #FFBCA2 0%, rgb(196, 196, 196) 0%, rgb(196, 196, 196) 100%);">
+            <input type="range" id="settings-volume" class="progress" name="settings-volume" min="0" max="1" step="0.1" value="0.2" style="background: linear-gradient(to right, #FFBCA2 20%, #FFBCA2 0%, rgb(196, 196, 196) 0%, rgb(196, 196, 196) 100%);">
             <div class="settings-volume-buttons">
               <div class="settings-volume-buttons-mute">
                 <img src="./assets/svg/volume-mute.svg" alt="mute">
@@ -93,10 +89,10 @@
   
           <div class="settings-number settings-block">
             <h2 class="settings-subheader">Time to answer</h2>
-            <div class="settings-number">
-              <button class="settings-number-btn" onclick="this.parentNode.querySelector('input[type=number]').stepDown()" class="minus">-</button>
-              <input class="settings-number-input" name="settings-number" value="20" min="0" max="30" step="5" type="number" readonly>
-              <button class="settings-number-btn" onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus">+</button>
+            <div class="settings-number settings-number-buttons">
+              <button class="settings-number-btn" id="minus" class="minus">-</button>
+              <input class="settings-number-input" name="settings-number" value="20" min="5" max="30" step="5" type="number" readonly>
+              <button class="settings-number-btn" id="plus" class="plus">+</button>
             </div>
           </div>
   
@@ -430,8 +426,12 @@
             <div class="button button-white modal-info-btn">Close</div>
           </div>
         </div>
+
+        <audio class="audio audio-correct" src="./assets/sounds/correct.mp3"></audio>
+        <audio class="audio audio-incorrect" src="./assets/sounds/incorrect.mp3"></audio>
+        <audio class="audio audio-final" src="./assets/sounds/final.mp3"></audio>
       </main>
-  
+
       <footer class="footer">
         <a class="footer-left" href="https://rs.school/" target="_blank">
           <img src="./assets/svg/rsschool-icon.svg" alt="rsschool">
@@ -454,6 +454,13 @@
       <div class="container-overlay-item container-overlay-rt container-overlay-rt-hidden"></div>
       <div class="container-overlay-item container-overlay-lb container-overlay-lb-hidden"></div>
       <div class="container-overlay-item container-overlay-rb container-overlay-rb-hidden"></div>
+
+      <div class="container-overlay-left container-overlay-left-hidden"></div>
+      <div class="container-overlay-center container-overlay-center-hidden"></div>
+      <div class="container-overlay-right container-overlay-right-hidden"></div>
+
+      <div class="container-overlay-half-left container-overlay-half-left-hidden"></div>
+      <div class="container-overlay-half-right container-overlay-half-right-hidden"></div>
     </div>
   </div>
   <script src="./index.js"></script>
