@@ -1,0 +1,28 @@
+.footer {
+  position: sticky;
+  bottom: 0;
+  // position: relative;
+  margin: 0 auto;
+  width: 100%;
+  padding: 20px 0;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: $white;
+  font-size: 32px;
+  &-not-transparent {
+    background-color: $black;
+    z-index: 2;
+  }
+  &-left {
+    img {
+      height: 60px;
+    }
+  }
+  &-right {
+    display: flex;
+    justify-content: space-between;
+    width: 500px;
+  }
+}

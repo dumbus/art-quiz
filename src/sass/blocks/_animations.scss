@@ -1,0 +1,346 @@
+/* Simple animations */
+
+.hidden {
+  display: none;
+}
+
+.hidden-block {
+  transform: translateX(-100vw);
+}
+
+.slideFromLeft {
+  animation-name: slideFromLeft;
+  animation-duration: 1s;
+}
+
+.slideToRight {
+  animation-name: slideToRight;
+  animation-duration: 1s;
+}
+
+.slideToLeft {
+  animation-name: slideToLeft;
+  animation-duration: 1s;
+}
+
+.slideFromRight {
+  animation-name: slideFromRight;
+  animation-duration: 1s;
+}
+
+@keyframes slideFromLeft {
+  from {
+    transform: translateX(-200vw);
+  }
+
+  to {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes slideToRight {
+  from {
+    transform: translateX(0px);
+  }
+
+  to {
+    transform: translateX(200vw);
+  }
+}
+
+@keyframes slideToLeft {
+  from {
+    transform: translateX(0px);
+  }
+
+  to {
+    transform: translateX(-100vw);
+  }
+}
+
+@keyframes slideFromRight {
+  from {
+    transform: translateX(100vw);
+  }
+
+  to {
+    transform: translateX(0px);
+  }
+}
+
+.hidden-modal {
+  opacity: 0;
+}
+
+/* 
+=================================
+      appearance animations 
+=================================
+*/
+
+.slideInLT {
+  animation-name: slideInLT;
+  animation-duration: 1s;
+}
+
+@keyframes slideInLT {
+  from {
+    transform: translate(-100%, -100%);
+  }
+
+  50% {
+    transform: translate(0px, 0px);
+  }
+
+  to {
+    transform: translate(-100%, -100%);
+  }
+}
+
+.slideInRT {
+  animation-name: slideInRT;
+  animation-duration: 1s;
+}
+
+@keyframes slideInRT {
+  from {
+    transform: translate(100%, -100%);
+  }
+
+  50% {
+    transform: translate(0px, 0px);
+  }
+
+  to {
+    transform: translate(100%, -100%);
+  }
+}
+
+.slideInLB {
+  animation-name: slideInLB;
+  animation-duration: 1s;
+}
+
+@keyframes slideInLB {
+  from {
+    transform: translate(-100%, 100%);
+  }
+
+  50% {
+    transform: translate(0px, 0px);
+  }
+
+  to {
+    transform: translate(-100%, 100%);
+  }
+}
+
+.slideInRB {
+  animation-name: slideInRB;
+  animation-duration: 1s;
+}
+
+@keyframes slideInRB {
+  from {
+    transform: translate(100%, 100%);
+  }
+
+  50% {
+    transform: translate(0px, 0px);
+  }
+
+  to {
+    transform: translate(100%, 100%);
+  }
+}
+
+.fadeIn {
+  animation-name: fadeIn;
+  animation-duration: 1s;
+}
+
+.fadeOut {
+  animation-name: fadeOut;
+  animation-duration: 0.5s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+.container-overlay-left {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 25%;
+  height: 200%;
+  background-color: $black;
+}
+
+.container-overlay-left-hidden {
+  transform: translateY(-200%);
+}
+
+.container-overlay-center {
+  top: 0;
+  left: 25%;
+  position: absolute;
+  width: 50%;
+  height: 200%;
+  background-color: $black;
+}
+
+.container-overlay-center-hidden {
+  transform: translateY(200%);
+}
+
+.container-overlay-right {
+  top: 0;
+  right: 0;
+  position: absolute;
+  width: 25%;
+  height: 200%;
+  background-color: $black;
+}
+
+.container-overlay-right-hidden {
+  transform: translateY(-200%);
+}
+
+.slideInLeft {
+  animation-name: slideInLeft;
+  animation-duration: 2s;
+}
+
+.slideInCenter {
+  animation-name: slideInCenter;
+  animation-duration: 2s;
+}
+
+.slideInRight {
+  animation-name: slideInRight;
+  animation-duration: 2s;
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateY(-200%);
+  }
+
+  50% {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(-200%);
+  }
+}
+
+@keyframes slideInCenter {
+  from {
+    transform: translateY(200%);
+  }
+
+  50% {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(200%);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateY(-200%);
+  }
+
+  50% {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(-200%);
+  }
+}
+
+.container-overlay-half-left {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 200%;
+  background-color: $black;
+}
+
+.container-overlay-half-left-hidden {
+  transform: translateX(-100%);
+}
+
+
+.container-overlay-half-right {
+  top: 0;
+  right: 0;
+  position: absolute;
+  width: 50%;
+  height: 200%;
+  background-color: $black;
+}
+
+.container-overlay-half-right-hidden {
+  transform: translateX(100%);
+}
+
+.slideInHalfLeft {
+  animation-name: slideInHalfLeft;
+  animation-duration: 1s;
+}
+
+.slideInHalfRight {
+  animation-name: slideInHalfRight;
+  animation-duration: 1s;
+}
+
+@keyframes slideInHalfLeft {
+  from {
+    transform: translateX(-100%);
+  }
+
+  50% {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes slideInHalfRight {
+  from {
+    transform: translateX(100%);
+  }
+
+  50% {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(100%);
+  }
+}
