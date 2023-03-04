@@ -1,0 +1,207 @@
+@import "variables";
+
+@font-face {
+  font-family: 'Gilroy';
+  src: url('./assets/fonts/Gilroy-Light/Gilroy-Light.eot');
+  src: url('./assets/fonts/Gilroy-Light/Gilroy-Light.eot?#iefix') format('embedded-opentype'),
+  url('./assets/fonts/Gilroy-Light/Gilroy-Light.woff') format('woff'),
+  url('./assets/fonts/Gilroy-Light/Gilroy-Light.ttf') format('truetype');
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gilroy';
+  src: url('./assets/fonts/Gilroy-Regular/Gilroy-Regular.eot');
+  src: url('./assets/fonts/Gilroy-Regular/Gilroy-Regular.eot?#iefix') format('embedded-opentype'),
+  url('./assets/fonts/Gilroy-Regular/Gilroy-Regular.woff') format('woff'),
+  url('./assets/fonts/Gilroy-Regular/Gilroy-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gilroy';
+  src: url('./assets/fonts/Gilroy-Semibold/Gilroy-SemiBold.eot');
+  src: url('./assets/fonts/Gilroy-Semibold/Gilroy-SemiBold.eot?#iefix') format('embedded-opentype'),
+  url('./assets/fonts/Gilroy-Semibold/Gilroy-SemiBold.woff') format('woff'),
+  url('./assets/fonts/Gilroy-Semibold/Gilroy-SemiBold.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gilroy';
+  src: url('./assets/fonts/Gilroy-Bold/Gilroy-Bold.eot');
+  src: url('./assets/fonts/Gilroy-Bold/Gilroy-Bold.eot?#iefix') format('embedded-opentype'),
+  url('./assets/fonts/Gilroy-Bold/Gilroy-Bold.woff') format('woff'),
+  url('./assets/fonts/Gilroy-Bold/Gilroy-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+  }
+
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  font-family: 'Gilroy';
+}
+
+.container {
+  position: absolute;
+  width: 100%;
+  min-height: 100vh;
+  &-mainscreen {
+    background: url("./assets/img/main-bg.jpg");
+    background-position: top;
+    background-size: 100vw;
+  }
+  &-default {
+    background-color: $black;
+  }
+}
+
+.container-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1000;
+  &-item {
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    background-color: $black;
+  }
+  &-lt {
+    top: 0;
+    left: 0;
+    &-hidden {
+      transform: translate(-100%, -100%);
+    }
+  }
+  &-rt {
+    top: 0;
+    right: 0;
+    &-hidden {
+      transform: translate(100%, -100%);
+    }
+  }
+  &-lb {
+    bottom: 0;
+    left: 0;
+    &-hidden {
+      transform: translate(-100%, 100%);
+    }
+  }
+  &-rb {
+    bottom: 0;
+    right: 0;
+    &-hidden {
+      transform: translate(100%, 100%);
+    }
+  }
+}
+
+.container-inner {
+  position: relative;
+  margin: 0 auto;
+  width: calc(1440px - 80px);
+  min-height: 100vh;
+  z-index: 0;
+}
+
+.main {
+  width: 100%;
+  min-height: calc(100vh - 200px);
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+  height: 80px;
+  font-weight: 500;
+  font-size: 32px;
+  color: $white;
+  border: 1.5px solid $white;
+  border-radius: 50px;
+  background-color: transparent;
+  &:hover {
+    transition: 0.5s all;
+    background-color: $white;
+    color: $black;
+    cursor: pointer;
+  }
+  &:active {
+    transition: 0s all;
+    border: 1.5px solid $pink;
+    background-color: $pink;
+    color: $black;
+  }
+  &-white {
+    color: $black;
+    border: 1.5px solid $black;
+    &:hover {
+      transition: 0.5s all;
+      background-color: $black;
+      color: $white;
+    }
+    &:active {
+      transition: 0s all;
+      border: 1.5px solid $pink;
+      background-color: $pink;
+      color: $black;
+    }
+  }
+  &-pink {
+    background-color: $pink;
+    border: 1.5px solid $pink;
+    color: $black;
+    &:hover {
+      transition: 0.5s all;
+      background-color: $black;
+      color: $white;
+    }
+    &:active {
+      transition: 0s all;
+      border: 1.5px solid $black;
+      background-color: $white;
+      color: $black;
+    }
+  }
+}
+
+@mixin round {
+  content: "";
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  top: -5px;
+  border: 1.5px solid $white;
+  border-radius: 100%;
+}
+
+@mixin roundSmall {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  top: -5px;
+  border: 1.5px solid $white;
+  border-radius: 100%;
+}
+
+@import "blocks/header";
+@import "blocks/footer";
+
+@import "blocks/mainscreen";
+@import "blocks/settings";
+@import "blocks/categories";
+@import "blocks/questions";
+@import "blocks/modal";
+@import "blocks/animations";
+@import "blocks/results.scss";
+@import "blocks/media";

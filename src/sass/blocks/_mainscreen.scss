@@ -1,0 +1,45 @@
+.mainscreen-container {
+  position: absolute;
+  margin: 0 auto;
+  padding: 40px 40px 20px 40px;
+  width: calc(100% - 80px);
+  height: calc(100% - 340px);
+}
+
+.mainscreen {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  width: 900px;
+  color: $white;
+  &-header {
+    position: relative;
+    grid-column: 1 / 3;
+    justify-self: center;
+    margin: 20px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 120px;
+    &::before {
+      @include round;
+      left: -40px;
+    }
+    &::after {
+      @include round;
+      left: 40px;
+    }
+  }
+  &-buttons {
+    display: flex;
+    align-self: center;
+    justify-content: space-between;
+    margin-top: 45px;
+  }
+}
+
+
+

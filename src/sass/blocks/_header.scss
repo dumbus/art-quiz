@@ -1,0 +1,224 @@
+.header {
+  position: sticky;
+  top: 0;
+  margin: 0 auto;
+  width: 100%;
+  padding: 20px 0;
+  height: 60px;
+  z-index: 2;
+  &-not-transparent {
+    background-color: $black;
+    z-index: 2;
+  }
+  &-default {
+    position: relative;
+    width: 100%;
+    z-index: 1;
+    &-icon {
+      position: absolute;
+      right: 0;
+      width: 60px;
+      height: 60px;
+      &:hover {
+        cursor: pointer;
+        animation-name: rotate;
+        animation-duration: 1s;
+      }
+    }
+    @keyframes rotate {
+      from {
+        transform: rotate(0);
+      }
+    
+      to {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  &-settings {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 36px;
+    &-left {
+      &-text {
+        color: $white;
+      }
+    }
+    &-right {
+      img {
+        width: 40px;
+        height: 40px;
+      }
+      cursor: pointer;
+    }
+  }
+
+  &-menu {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: $white;
+    &-text {
+      width: 50%;
+      display: flex;
+      justify-content: space-between;
+      font-size: 36px;
+      &-logo {
+        position: relative;
+        margin-left: 20px;
+        font-size: 48px;
+        font-weight: bold;
+        z-index: 10;
+        span {
+          color: $pink;
+        }
+        .pseudo-left {
+          position: absolute;
+          width: 70px;
+          height: 70px;
+          border: 1.5px solid $pink; 
+          border-radius: 100%;
+          top: -7px;
+          left: -20px;
+          z-index: 1;
+        }
+        .pseudo-right {
+          position: absolute;
+          width: 70px;
+          height: 70px;
+          border: 1.5px solid $pink; 
+          border-radius: 100%;
+          top: -7px;
+          left: 10px;
+          z-index: 1;
+        }
+      }
+      &-home {
+        padding: 8px 0;
+        cursor: pointer;
+        &:hover {
+          transition: all 0.5s;
+          color: $error;
+        }
+      }
+      &-categories {
+        padding: 8px 0;
+        color: $pink;
+        cursor: pointer;
+      }
+    }
+    &-icon {
+      width: 60px;
+      height: 60px;
+      &:hover {
+        cursor: pointer;
+        animation-name: rotate;
+        animation-duration: 1s;
+      }
+    }
+  }
+
+  &-results {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: $white;
+    &-text {
+      width: 80%;
+      display: flex;
+      justify-content: space-between;
+      font-size: 36px;
+      &-logo {
+        position: relative;
+        margin-left: 20px;
+        font-size: 48px;
+        font-weight: bold;
+        z-index: 10;
+        span {
+          color: $pink;
+        }
+        .pseudo-left {
+          position: absolute;
+          width: 70px;
+          height: 70px;
+          border: 1.5px solid $pink; 
+          border-radius: 100%;
+          top: -7px;
+          left: -20px;
+          z-index: 1;
+        }
+        .pseudo-right {
+          position: absolute;
+          width: 70px;
+          height: 70px;
+          border: 1.5px solid $pink; 
+          border-radius: 100%;
+          top: -7px;
+          left: 10px;
+          z-index: 1;
+        }
+      }
+      &-home {
+        padding: 8px 0;
+        cursor: pointer;
+        &:hover {
+          transition: all 0.5s;
+          color: $error;
+        }
+      }
+      &-categories {
+        padding: 8px 0;
+        cursor: pointer;
+        &:hover {
+          transition: all 0.5s;
+          color: $error;
+        }
+      }
+      &-results {
+        padding: 8px 0;
+        color: $pink;
+        cursor: pointer;
+      }
+    }
+  }
+
+  &-questions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    width: 825px;
+    color: $white;
+    &-close {
+      width: 25px;
+      height: 25px;
+      margin-right: 15px;
+      cursor: pointer;
+    }
+    &-progress {
+      position: relative;
+      width: 700px;
+      height: 4px;
+      &-inactive {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: #A4A4A4;
+      }
+      &-active {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: $pink;
+      }
+    }
+    &-timer {
+      font-size: 30px;
+    }
+  }
+}
+
